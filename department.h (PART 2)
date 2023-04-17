@@ -1,0 +1,44 @@
+#include <string>
+class department
+
+{
+
+private:
+
+	std::string id;
+
+	std::string name;
+
+	std::string history;
+
+	student studentList[25];
+
+	int studentCount = 0;
+
+public:
+
+	void setId(std::string id);
+
+	void setName(std::string name);
+
+	void setHistory(std::string history);
+
+	void addStudent(class student e);
+
+	std::string getId();
+
+	std::string getName();
+
+	std::string getHistory();
+
+	void setCount(int count);
+
+	int getCount();
+
+	void getList();
+
+	void deleteStudent(int id);
+
+	bool studentExist(int id);
+
+};
