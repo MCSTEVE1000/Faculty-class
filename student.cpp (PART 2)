@@ -1,0 +1,35 @@
+#include <iostream>
+
+#include "student.h"
+
+void student::setId(int idp)
+
+{
+
+	id = idp;
+
+}
+
+void student::setName(std::string namep)
+
+{
+
+	fullName = namep;
+
+}
+
+int student::getId()
+
+{
+
+	return id;
+
+}
+
+std::string student::getName()
+
+{
+
+	return fullName;
+
+}
