@@ -1,0 +1,22 @@
+#include <string>
+class student
+
+{
+
+private:
+
+	int id;
+
+	std::string fullName;
+
+public:
+
+	void setId(int id);
+
+	void setName(std::string name);
+
+	int getId();
+
+	std::string getName();
+
+};
