@@ -1,0 +1,70 @@
+// Question 1
+#include <iostream>
+#include <string>
+#include "student.h"
+using namespace std;
+int main() {
+    student s1, s2;
+    string str;
+    int n;
+    float f;
+    char c;
+    cout << "Enter the information of the first student: " << endl;
+    cout << "First name: ";
+    cin >> str;
+    s1.set_first_name(str);
+    cout << "Last name: ";
+    cin >> str;
+    s1.set_last_name(str);
+    cout << "Student ID: ";
+    cin >> n;
+    s1.set_id(str);
+    cout << "Date of birth: ";
+    cin >> str;
+    s1.set_dob(str);
+    cout << "GPA: ";
+    cin >> f;
+    s1.set_gpa(f);
+    cout << "Start year: ";
+    cin >> n;
+    s1.set_start_year(n);
+    cout << "Credit: ";
+    cin >> n;
+    s1.set_completed_credit(n);
+    cout << "Program: ";
+    cin >> c;
+    s1.set_program(c);
+    cout << "Enter the information of the second student: " << endl;
+    cout << "First name: ";
+    cin >> str;
+    s2.set_first_name(str);
+    cout << "Last name: ";
+    cin >> str;
+    s2.set_last_name(str);
+    cout << "Student ID: ";
+    cin >> n;
+    s2.set_id(str);
+    cout << "Date of birth: ";
+    cin >> str;
+    s2.set_dob(str);
+    cout << "GPA: ";
+    cin >> f;
+    s2.set_gpa(f);
+    cout << "Start year: ";
+    cin >> n;
+    s2.set_start_year(n);
+    cout << "Credit: ";
+    cin >> n;
+    s2.set_completed_credit(n);
+    cout << "Program: ";
+    cin >> c;
+    s2.set_program(c);
+    s1.print_std_info();
+    s2.print_std_info();
+    cout << endl;
+    cout << "s1 gpa: " << s1.get_gpa() << endl;
+    cout << "s2 gpa: " << s2.get_gpa() << endl;
+   
+    cout << "The student id with the higher gpa is: " << s1.compare_gpa(s2) << endl;
+    return 0;
+}
