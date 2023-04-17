@@ -1,0 +1,165 @@
+#include<iostream>
+
+#include "student.h"
+
+#include "department.h"
+
+using namespace std;
+
+void department::setId(string idp)
+
+{
+
+	id = idp;
+
+}
+
+void department::setName(string namep)
+
+{
+
+	name = namep;
+
+}
+
+void department::setHistory(string historyp)
+
+{
+
+	history = historyp;
+
+}
+
+void department::setCount(int count)
+
+{
+
+	studentCount = count;
+
+}
+
+int department::getCount()
+
+{
+
+	return studentCount;
+
+}
+
+void department::addStudent(class student e)
+
+{
+
+	studentList[getCount()] = e;
+
+	studentCount = studentCount + 1;
+
+}
+
+string department::getId()
+
+{
+
+	return id;
+
+}
+
+string department::getName()
+
+{
+
+	return name;
+
+}
+
+string department::getHistory()
+
+{
+
+	return history;
+
+}
+
+void department::getList()
+
+{
+
+	student e;
+
+	for (int i = 0; i < getCount(); i++)
+
+	{
+
+		e =studentList[i];
+
+		cout << e.getId() << " " << e.getName();
+
+		cout << endl;
+
+	}
+
+}
+
+void department::deleteStudent(int id)
+
+{
+
+	bool flag = false;
+
+	for (int i = 0; i < getCount(); i++)
+
+	{
+
+		if (id == studentList[i].getId())
+
+		{
+
+			flag = true;
+
+			studentList[i] = studentList[i + 1];
+
+		}
+
+		if (flag == true)
+
+		{
+
+			studentList[i] = studentList[i + 1];
+
+		}
+
+	}
+
+	if (flag == true)
+
+	{
+
+		setCount(getCount() - 1);
+
+	}
+
+}
+
+bool department::studentExist(int id)
+
+{
+
+	bool flag = false;
+
+	for (int i = 0; i < getCount(); i++)
+
+	{
+
+		if (id == studentList[i].getId())
+
+		{
+
+			flag = true;
+
+		}
+
+	}
+
+	return flag;
+
+}
