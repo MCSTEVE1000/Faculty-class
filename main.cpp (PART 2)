@@ -1,0 +1,81 @@
+#include <iostream>
+
+#include "student.h"
+
+#include "department.h"
+
+using namespace std;
+
+int main() {
+
+	department d;
+
+	string str;
+
+	int id;
+
+	cout << "enter id for department\n";
+
+	cin >> str;
+
+	d.setId(str);
+
+	cout << "enter name\n";
+
+	cin >> str;
+
+	d.setName(str);
+
+	cout << "enter history\n";
+
+	cin >> str;
+
+	d.setHistory(str);
+
+	student e;
+
+	for (int i = 0; i < 5; i++)
+
+	{
+
+		cout << "enter student id\n";
+
+		cin >> id;
+
+		cout << "enter student name\n";
+
+		cin >> str;
+
+		e.setId(id);
+
+		e.setName(str);
+
+		d.addStudent(e);
+
+	}
+
+	cout << "\n\ndepartment details:" << endl;
+
+	cout << d.getId() << endl;
+
+	cout << d.getName() << endl;
+
+	cout << d.getHistory() << endl;
+
+	cout << "List of Student\n";
+
+	d.getList();
+
+	cout << "student count: " << d.getCount() << endl;
+
+	cout << "enter id of student to delete\n";
+
+	cin >> id;
+
+	d.deleteStudent(id);
+
+	cout << "\nnew student list\n";
+
+	d.getList();
+
+}
